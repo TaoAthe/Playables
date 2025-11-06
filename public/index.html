@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match - Neon Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- HUD -->
+        <div class="hud">
+            <div class="timer" id="timer">60</div>
+            <div class="score-container">
+                <div class="score" id="score">0</div>
+                <div class="combo" id="combo">×1</div>
+            </div>
+        </div>
+
+        <!-- Game Grid -->
+        <div class="grid" id="grid"></div>
+
+        <!-- Game Over Overlay -->
+        <div class="overlay hidden" id="overlay">
+            <div class="result-panel">
+                <h1 id="result-title">JACKPOT!</h1>
+                <div class="final-score">
+                    <span>SCORE</span>
+                    <div id="final-score">0</div>
+                </div>
+                <button class="restart-btn" id="restart-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="audio-flip" preload="auto">
+        <source src="../assets/audio/flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio-match" preload="auto">
+        <source src="../assets/audio/match.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio-win" preload="auto">
+        <source src="../assets/audio/win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="audio-lose" preload="auto">
+        <source src="../assets/audio/lose.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="game.js"></script>
+</body>
+</html>
